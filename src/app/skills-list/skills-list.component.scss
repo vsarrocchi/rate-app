@@ -1,0 +1,93 @@
+.container {
+  width: 90vw;
+  min-height: 50vh;
+  margin: auto;
+}
+
+.skills-create {
+  div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    div {
+      display: flex;
+      align-items: center;
+    }
+  }
+  button {
+    background-color: #56c09e;
+  }
+}
+
+.mat-form-field {
+  margin-right: 10px;
+}
+
+.mat-button-toggle-group {
+  border: unset;
+  .mat-button-toggle {
+    border: solid 1px rgba(0, 0, 0, 0.12);
+    margin: 5px;
+  }
+}
+
+.divider {
+  margin: 2rem 0;
+}
+
+.skills-list:nth-child(odd) {
+  background-color: #f2f2f2 !important;
+}
+
+.list-item {
+  height: unset !important;
+  div {
+    padding: 5px 0;
+  }
+}
+
+.mat-list-base {
+  padding-top: unset;
+}
+
+.mat-card .mat-divider-horizontal {
+  position: unset;
+}
+
+::ng-deep {
+  .mat-form-field-wrapper {
+    margin: 0 !important;
+    padding-bottom: 0;
+  }
+  .mat-list-item-content {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: space-between !important;
+  }
+  .mat-button-toggle-checked {
+    background-color: #3093D5;
+    color: white !important;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .container {
+    width: 80vw;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .container {
+    width: 70vw;
+  }
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .container {
+    width: 50vw;
+  }
+}

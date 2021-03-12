@@ -1,0 +1,59 @@
+<mat-card class="container">
+  <!-- Skills create -->
+  <div class="skills-create">
+    <h3>SKILLS</h3>
+    <div>
+      <div>
+        <mat-form-field appearance="outline">
+          <mat-label>Skill</mat-label>
+          <input matInput placeholder="Add skill..." [(ngModel)]="input.name" />
+        </mat-form-field>
+        <mat-button-toggle-group
+          name="fontStyle"
+          aria-label="Font Style"
+          [(ngModel)]="input.rate"
+        >
+          <mat-button-toggle value="0">0</mat-button-toggle>
+          <mat-button-toggle value="1">1</mat-button-toggle>
+          <mat-button-toggle value="2">2</mat-button-toggle>
+          <mat-button-toggle value="3">3</mat-button-toggle>
+          <mat-button-toggle value="4">4</mat-button-toggle>
+          <mat-button-toggle value="5">5</mat-button-toggle>
+        </mat-button-toggle-group>
+      </div>
+      <button mat-raised-button color="primary" (click)="addSkill()">
+        Add Skill
+      </button>
+    </div>
+  </div>
+  <mat-divider class="divider"></mat-divider>
+  <!-- Skills list -->
+  <mat-list
+    *ngFor="let skill of skillsList; let i = index"
+    class="skills-list"
+    role="list"
+  >
+    <mat-list-item class="list-item" role="listitem">
+      <div>
+        {{ skill.name }}
+      </div>
+      <div>
+        <mat-button-toggle-group
+          name="fontStyle"
+          aria-label="Font Style"
+          [value]="skill.rate"
+        >
+          <mat-button-toggle value="0">0</mat-button-toggle>
+          <mat-button-toggle value="1">1</mat-button-toggle>
+          <mat-button-toggle value="2">2</mat-button-toggle>
+          <mat-button-toggle value="3">3</mat-button-toggle>
+          <mat-button-toggle value="4">4</mat-button-toggle>
+          <mat-button-toggle value="5">5</mat-button-toggle>
+        </mat-button-toggle-group>
+        <button mat-icon-button (click)="removeSkill(i)">
+          <mat-icon>close</mat-icon>
+        </button>
+      </div>
+    </mat-list-item>
+  </mat-list>
+</mat-card>
